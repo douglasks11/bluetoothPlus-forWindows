@@ -1,0 +1,48 @@
+<Window x:Class="BluetoothPlus.Views.FindDeviceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bluetooth+ — encontrar dispositivo" Width="440" Height="600" ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterOwner" Icon="pack://application:,,,/Assets/app.ico"
+        Background="{DynamicResource Bg}" Foreground="{DynamicResource Text}"
+        FontFamily="Segoe UI Variable Text, Segoe UI" FontSize="13">
+  <Grid Margin="24,20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <!-- Aparelho -->
+    <StackPanel Orientation="Horizontal">
+      <Border Width="48" Height="48" CornerRadius="12" Background="{DynamicResource Surface}">
+        <TextBlock x:Name="DeviceGlyph" Style="{StaticResource Glyph}" FontSize="22" HorizontalAlignment="Center"/>
+      </Border>
+      <StackPanel Margin="14,0,0,0" VerticalAlignment="Center">
+        <TextBlock x:Name="DeviceName" FontSize="17" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" MaxWidth="320"/>
+        <TextBlock x:Name="DeviceSubtitle" Foreground="{DynamicResource TextDim}" Margin="0,2,0,0"/>
+      </StackPanel>
+    </StackPanel>
+
+    <!-- Medidor quente/frio -->
+    <Grid Grid.Row="1" Margin="0,16">
+      <Canvas x:Name="GaugeCanvas"/>
+      <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,24,0,0">
+        <TextBlock x:Name="ProximityText" FontSize="30" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="TrendText" FontSize="15" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+        <TextBlock x:Name="ReadingText" Foreground="{DynamicResource TextDim}" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+      </StackPanel>
+    </Grid>
+
+    <StackPanel Grid.Row="2">
+      <CheckBox x:Name="SoundBox" IsChecked="True" Foreground="{DynamicResource Text}"
+                Content="Bipe que acelera conforme você se aproxima"/>
+      <Border Background="{DynamicResource Surface}" CornerRadius="10" Padding="12,10" Margin="0,14,0,0">
+        <TextBlock TextWrapping="Wrap" Foreground="{DynamicResource TextDim}" FontSize="12.5">
+          Ande devagar pelo ambiente e observe se está "esquentando". Fones costumam transmitir sinal
+          só fora do estojo; se ele estiver conectado ao celular, desligue o Bluetooth do celular
+          para o fone voltar a transmitir. A medição indica a região, não o ponto exato.
+        </TextBlock>
+      </Border>
+    </StackPanel>
+  </Grid>
+</Window>

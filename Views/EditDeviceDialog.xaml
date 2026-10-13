@@ -1,0 +1,37 @@
+<Window x:Class="BluetoothPlus.Views.EditDeviceDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bluetooth+ — editar dispositivo" Width="420" SizeToContent="Height"
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
+        Background="{DynamicResource Bg}" Foreground="{DynamicResource Text}"
+        FontFamily="Segoe UI Variable Text, Segoe UI" FontSize="13">
+  <StackPanel Margin="22">
+    <TextBlock x:Name="Header" FontSize="17" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"/>
+    <TextBlock x:Name="SubHeader" Foreground="{DynamicResource TextDim}" Margin="0,3,0,18"/>
+
+    <TextBlock Text="APELIDO" Style="{StaticResource SectionTitle}" Margin="0,0,0,6"/>
+    <TextBox x:Name="NicknameBox" Padding="10,8" MaxLength="40"/>
+    <TextBlock Text="Deixe em branco para usar o nome do aparelho." Foreground="{DynamicResource TextDim}"
+               FontSize="12" Margin="0,5,0,16"/>
+
+    <TextBlock Text="TIPO" Style="{StaticResource SectionTitle}" Margin="0,0,0,6"/>
+    <ComboBox x:Name="CategoryBox" Padding="8,6">
+      <ComboBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Style="{StaticResource Glyph}" Text="{Binding Glyph}" FontSize="15" Width="22"/>
+            <TextBlock Text="{Binding Label}" VerticalAlignment="Center"/>
+          </StackPanel>
+        </DataTemplate>
+      </ComboBox.ItemTemplate>
+    </ComboBox>
+
+    <CheckBox x:Name="HiddenBox" Margin="0,18,0,0" Foreground="{DynamicResource Text}"
+              Content="Ocultar este dispositivo da lista e do radar"/>
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,22,0,0">
+      <Button Content="Cancelar" IsCancel="True"/>
+      <Button Content="Salvar" Style="{StaticResource AccentButton}" Click="Save_Click" IsDefault="True" Margin="0"/>
+    </StackPanel>
+  </StackPanel>
+</Window>

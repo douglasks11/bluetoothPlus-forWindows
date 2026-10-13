@@ -1,0 +1,8 @@
+# Saída de compilação (.NET)
+bin/
+obj/
+dist/
+*.user
+.vs/
+
+# O executável para download fica versionado em download/*.zip

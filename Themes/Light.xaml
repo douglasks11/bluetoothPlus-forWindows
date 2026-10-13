@@ -1,0 +1,28 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- Tema claro: cartões brancos sobre fundo cinza-claro, texto quase preto. -->
+  <SolidColorBrush x:Key="Bg" Color="#FFF1F3F6"/>
+  <SolidColorBrush x:Key="Panel" Color="#FFFFFFFF"/>
+  <SolidColorBrush x:Key="PanelBorder" Color="#FFDDE1E8"/>
+  <SolidColorBrush x:Key="Surface" Color="#FFF0F2F5"/>
+  <SolidColorBrush x:Key="SurfaceHover" Color="#FFF4F6F9"/>
+  <SolidColorBrush x:Key="Selection" Color="#FFE3ECFD"/>
+  <SolidColorBrush x:Key="Text" Color="#FF111827"/>
+  <SolidColorBrush x:Key="TextDim" Color="#FF4B5563"/>
+  <SolidColorBrush x:Key="Accent" Color="#FF2563EB"/>
+  <SolidColorBrush x:Key="AccentBorder" Color="#FF2563EB"/>
+  <SolidColorBrush x:Key="Ok" Color="#FF16A34A"/>
+  <SolidColorBrush x:Key="Gold" Color="#FFCA8A04"/>
+  <SolidColorBrush x:Key="Neutral" Color="#FF9CA3AF"/>
+  <SolidColorBrush x:Key="ScrollThumb" Color="#33000000"/>
+
+  <!-- Radar / gráfico -->
+  <SolidColorBrush x:Key="RadarGrid" Color="#2E1F2937"/>
+  <SolidColorBrush x:Key="RadarLabel" Color="#B31F2937"/>
+  <SolidColorBrush x:Key="RadarName" Color="#FF111827"/>
+  <SolidColorBrush x:Key="RadarNameBackdrop" Color="#E6FFFFFF"/>
+  <RadialGradientBrush x:Key="RadarGlow">
+    <GradientStop Color="#262563EB" Offset="0"/>
+    <GradientStop Color="#002563EB" Offset="1"/>
+  </RadialGradientBrush>
+</ResourceDictionary>
