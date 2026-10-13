@@ -1,86 +1,177 @@
+<div align="center">
+
+<img src="docs/logo.png" alt="Bluetooth+" width="112">
+
 # Bluetooth+ para Windows
 
-Gerenciador de Bluetooth para Windows 10/11 com interface gráfica, radar de
-proximidade, identificação do tipo de cada aparelho e avisos de bateria.
+**Um jeito mais bonito e mais útil de gerenciar o Bluetooth no Windows.**
+Radar de proximidade, ícone para cada tipo de aparelho, bateria na bandeja e avisos de bateria fraca.
 
-Feito por **Douglas Oliveira** :) — projeto gratuito.
+[![Versão](https://img.shields.io/badge/vers%C3%A3o-0.8.0-2563EB?style=for-the-badge)](download/)
+[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=for-the-badge&logo=windows&logoColor=white)](#-requisitos)
+[![.NET](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![Gratuito](https://img.shields.io/badge/projeto-gratuito-16A34A?style=for-the-badge)](#-créditos)
 
-## Download
+<br>
 
-1. Baixe **[BluetoothPlus-0.8.0.zip](https://github.com/douglasks11/bluetoothPlus-forWindows/raw/main/download/BluetoothPlus-0.8.0.zip)**
-   (pasta [`download/`](download/)).
-2. Extraia o `.zip` e abra o `BluetoothPlus.exe`. Não precisa instalar o .NET: ele já vem embutido.
-3. O app não é assinado digitalmente. Por isso, o navegador pode avisar que o arquivo é
-   "pouco baixado" (escolha **Manter**) e o Windows pode mostrar "O Windows protegeu o computador"
-   (clique em **Mais informações → Executar assim mesmo**).
+[![Baixar Bluetooth+](https://img.shields.io/badge/%E2%AC%87%20Baixar%20Bluetooth%2B%200.8.0-.zip%20%C2%B7%2069%20MB-2563EB?style=for-the-badge)](https://github.com/douglasks11/bluetoothPlus-forWindows/raw/main/download/BluetoothPlus-0.8.0.zip)
 
-**Requisitos:** Windows 10 versão 2004 (maio de 2020) ou mais novo / Windows 11, processador x64
-(Intel/AMD) e um adaptador Bluetooth.
+</div>
 
-## Recursos
+---
 
-- Lista ao vivo em cards, separada em "Meus dispositivos" e "Por perto"
-- Identificação do tipo com ícone e cor: fone, caixa de som, controle, celular, teclado,
-  mouse, relógio, TV, carro etc. Usa o *Class of Device* (Clássico) ou o *Appearance*
-  (BLE) declarado pelo aparelho e, na falta deles, o nome
-- Radar: cada dispositivo aparece a uma distância proporcional ao RSSI (-30 dBm = centro, -100 dBm = borda)
-- Gráfico do sinal ao longo do tempo para o dispositivo selecionado
-- Parear (confirmação, exibição ou digitação de PIN) e remover dispositivos
-- Bateria de fones Clássicos (valor publicado pelo Windows) e de dispositivos BLE (GATT), atualizada a cada 30 s
-- Bateria dos aparelhos conectados na dica e no menu do ícone da bandeja, com alerta de bateria
-  fraca configurável por tipo de aparelho (botão de engrenagem; padrão 20%, ou desligado).
-  Ao abrir, avisa de uma vez todos os aparelhos que já estão abaixo do limite
-- Modo "Encontrar": medidor quente/frio com bipe que acelera conforme você se aproxima
-- Apelidos, tipo escolhido manualmente e aparelhos ocultos (salvos em `%LOCALAPPDATA%\BluetoothPlus\settings.json`);
-  aparelhos sem nome e não pareados ficam ocultos por padrão
-- Tema claro e escuro, ou seguindo o Windows automaticamente (botão no cabeçalho)
-- Ícone na bandeja com aviso quando um dispositivo pareado conecta/desconecta
-- Opção "Iniciar com o Windows" (menu do ícone na bandeja)
-- Instalação por usuário embutida no próprio .exe, sem precisar de administrador
-- Ligar/desligar o rádio Bluetooth
-- Busca por nome, apelido, tipo ou endereço
+## ✨ Recursos
 
-## Instalação
+<table>
+<tr>
+<td width="50%" valign="top">
 
-Ao abrir o `BluetoothPlus.exe` pela primeira vez, ele pergunta se deve se instalar:
+### 📡 Dispositivos
+- Lista ao vivo em cards: **Meus dispositivos** e **Por perto**
+- **Ícone e cor por tipo**: fone, caixa de som, controle, celular, teclado, mouse, relógio, TV, carro…
+- **Radar de proximidade** e gráfico de sinal em tempo real
+- Parear (com PIN) e remover aparelhos
 
-- **Sim**: copia para `%LOCALAPPDATA%\Programs\BluetoothPlus`, cria o atalho no
-  menu Iniciar e aparece em *Configurações → Aplicativos instalados*, de onde
-  pode ser desinstalado.
-- **Não**: roda sem instalar e não pergunta de novo.
+</td>
+<td width="50%" valign="top">
 
-Fechar a janela mantém o app na bandeja. Para encerrar: botão direito no
-ícone → **Sair**. Para atualizar, saia pela bandeja antes de abrir a versão nova.
+### 🔋 Bateria
+- Bateria de fones, teclados, mouses e controles
+- Bateria dos conectados **direto no ícone da bandeja**
+- **Aviso de bateria fraca configurável por tipo** (ex.: fone em 15%, controle em 30%)
+- Ao abrir, avisa de uma vez tudo que já está abaixo do limite
 
-## Como funciona
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-O painel "Bluetooth e dispositivos" do Windows é uma interface sobre APIs
-WinRT públicas. O Bluetooth+ usa as mesmas:
+### 🔎 Encontrar
+- Modo **"quente ou frio"** para achar aquele fone perdido
+- Bipe que acelera conforme você se aproxima
+
+</td>
+<td width="50%" valign="top">
+
+### 🎨 Do seu jeito
+- **Apelidos**, tipo escolhido manualmente e aparelhos ocultos
+- Tema **claro**, **escuro** ou **seguindo o Windows**
+- Roda na bandeja e pode **iniciar com o Windows**
+
+</td>
+</tr>
+</table>
+
+## ⬇️ Download e instalação
+
+1. Baixe o **[BluetoothPlus-0.8.0.zip](https://github.com/douglasks11/bluetoothPlus-forWindows/raw/main/download/BluetoothPlus-0.8.0.zip)**.
+2. Extraia e abra o **`BluetoothPlus.exe`**.
+3. Na primeira vez, ele pergunta se quer **instalar**: cria o atalho no menu Iniciar e fica disponível em
+   *Configurações → Aplicativos instalados*, sem precisar de administrador. Se preferir, use sem instalar.
+
+> [!TIP]
+> Não precisa instalar o .NET nem mais nada: tudo já vem dentro do `.exe`.
+
+> [!WARNING]
+> O app ainda não tem assinatura digital, então o Windows desconfia de primeira:
+> - No navegador, se aparecer *"não é baixado com frequência"*, escolha **Manter**.
+> - Na tela azul *"O Windows protegeu o computador"*, clique em **Mais informações → Executar assim mesmo**.
+
+> [!NOTE]
+> Fechar a janela deixa o Bluetooth+ rodando na bandeja (perto do relógio).
+> Para encerrar: botão direito no ícone → **Sair**. Para atualizar, saia por lá antes de abrir a versão nova.
+
+## 💻 Requisitos
+
+| | |
+|---|---|
+| **Sistema** | Windows 10 versão 2004 (maio de 2020) ou mais novo, ou Windows 11 |
+| **Processador** | x64 (Intel ou AMD) |
+| **Hardware** | Adaptador Bluetooth (interno ou USB) |
+
+## ❓ Perguntas frequentes
+
+<details>
+<summary><b>A bateria do meu aparelho aparece como "—"</b></summary>
+<br>
+Nem todo aparelho informa a bateria ao Windows. A maioria dos fones modernos e dos teclados, mouses e controles
+Bluetooth LE informa; teclados Bluetooth Clássicos (mais antigos) geralmente não.
+</details>
+
+<details>
+<summary><b>O aviso de bateria fraca não aparece</b></summary>
+<br>
+Na engrenagem ⚙, use <b>Enviar aviso de teste</b>. Se nem ele aparecer, desligue o modo
+<b>Não incomodar / Assistente de foco</b> do Windows e confira se as notificações do Bluetooth+ estão permitidas
+em <i>Configurações → Sistema → Notificações</i>.
+</details>
+
+<details>
+<summary><b>O tipo do aparelho está errado</b></summary>
+<br>
+Selecione o aparelho e clique em <b>Editar</b>: dá para escolher o tipo manualmente e também dar um apelido.
+</details>
+
+<details>
+<summary><b>O modo "Encontrar" não acha meu fone</b></summary>
+<br>
+Fones costumam transmitir sinal só fora do estojo e quando não estão conectados a outro aparelho.
+Desligue o Bluetooth do celular para o fone voltar a transmitir. A medição indica a região, não o ponto exato.
+</details>
+
+<details>
+<summary><b>Como desinstalar?</b></summary>
+<br>
+Em <i>Configurações → Aplicativos → Aplicativos instalados</i>, procure <b>Bluetooth+</b> e clique em Desinstalar.
+</details>
+
+## 🛠️ Para desenvolvedores
+
+<details>
+<summary><b>Como funciona por dentro</b></summary>
+<br>
+
+O painel "Bluetooth e dispositivos" do Windows é uma interface sobre APIs WinRT públicas, e o Bluetooth+ usa as mesmas:
 
 | Função | API |
 |---|---|
-| Descoberta / estado (pareado, conectado) | `DeviceInformation.CreateWatcher` sobre *AssociationEndpoints* filtrados pelos protocolos Bluetooth Clássico e LE |
-| RSSI em tempo real | `BluetoothLEAdvertisementWatcher` + `System.Devices.Aep.SignalStrength` |
+| Descoberta e estado (pareado, conectado) | `DeviceInformation.CreateWatcher` sobre *AssociationEndpoints* dos protocolos Clássico e LE |
+| Sinal em tempo real | `BluetoothLEAdvertisementWatcher` + `System.Devices.Aep.SignalStrength` |
+| Tipo do aparelho | *Class of Device* (Clássico), *GAP Appearance* (BLE) e, na falta deles, o nome |
 | Pareamento | `DeviceInformationCustomPairing` |
 | Bateria (Clássico) | `DEVPKEY_Bluetooth_Battery` nos nós PnP do mesmo `ContainerId` |
-| Bateria (BLE) | GATT `0x180F` / `0x2A19` |
+| Bateria (BLE) | GATT Battery Service `0x180F` / `0x2A19` |
 | Rádio | `Windows.Devices.Radios.Radio` |
 
-## Compilar
+</details>
 
-Feito em C# / WPF (.NET 8). Compila no Windows ou no Linux/WSL:
+<details>
+<summary><b>Compilar a partir do código</b></summary>
+<br>
+
+Feito em **C# / WPF (.NET 8)**. Compila no Windows ou no Linux/WSL:
 
 ```bash
 bash build.sh
 ```
 
-Instala o .NET 8 SDK em `~/.dotnet` se necessário, gera `dist/BluetoothPlus.exe`
-(self-contained, não exige .NET no Windows) e copia para a pasta Downloads do Windows.
-No Windows, com o .NET 8 SDK instalado: `dotnet publish -c Release -o dist`.
+O script instala o .NET 8 SDK em `~/.dotnet` se necessário e gera `dist/BluetoothPlus.exe`
+(um único arquivo, com o .NET embutido). No Windows, com o .NET 8 SDK instalado:
 
-## Limitações conhecidas
+```powershell
+dotnet publish -c Release -o dist
+```
 
-- O WSL não acessa o rádio Bluetooth: o app só funciona rodando no Windows.
-- A bateria só aparece em aparelhos que a informam (a maioria dos fones modernos e
-  teclados/mouses BLE informa; teclados Bluetooth Clássicos geralmente não).
-- O modo "Encontrar" indica a região, não o ponto exato: o sinal Bluetooth oscila bastante.
+</details>
+
+## 💙 Créditos
+
+<div align="center">
+
+Feito por **Douglas Oliveira** :)
+
+Este é um projeto **gratuito**. Se ele te ajudou, deixe uma ⭐ no repositório!
+
+[![GitHub](https://img.shields.io/badge/GitHub-douglasks11-181717?style=for-the-badge&logo=github)](https://github.com/douglasks11)
+
+</div>
