@@ -16,6 +16,8 @@ Radar de proximidade, ícone para cada tipo de aparelho, bateria na bandeja e av
 
 [![Baixar Bluetooth+](https://img.shields.io/badge/%E2%AC%87%20Baixar%20Bluetooth%2B%200.8.0-.zip%20%C2%B7%2069%20MB-2563EB?style=for-the-badge)](https://github.com/douglasks11/bluetoothPlus-forWindows/raw/main/download/BluetoothPlus-0.8.0.zip)
 
+<img width="2559" height="1031" alt="image" src="https://github.com/user-attachments/assets/d03ad1f4-0c6e-45ad-a17b-04a833fbb93b" />
+
 </div>
 
 ---
