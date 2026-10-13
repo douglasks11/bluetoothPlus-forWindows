@@ -11,6 +11,7 @@ Radar de proximidade, ícone para cada tipo de aparelho, bateria na bandeja e av
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=for-the-badge&logo=windows&logoColor=white)](#-requisitos)
 [![.NET](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
 [![Gratuito](https://img.shields.io/badge/projeto-gratuito-16A34A?style=for-the-badge)](#-créditos)
+[![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-F59E0B?style=for-the-badge)](LICENSE)
 
 <br>
 
@@ -172,7 +173,9 @@ dotnet publish -c Release -o dist
 
 Feito por **Douglas Oliveira** :)
 
-Este é um projeto **gratuito**. Se ele te ajudou, deixe uma ⭐ no repositório!
+Este é um projeto **gratuito** e de código aberto sob a [licença MIT](LICENSE):
+use, modifique e compartilhe à vontade, mantendo os créditos.
+Se ele te ajudou, deixe uma ⭐ no repositório!
 
 [![GitHub](https://img.shields.io/badge/GitHub-douglasks11-181717?style=for-the-badge&logo=github)](https://github.com/douglasks11)
 
